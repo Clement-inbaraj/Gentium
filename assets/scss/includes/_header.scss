@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.call{
+    height: 130vh;
+    .mask{
+        height: 130vh;
+        .navbar-vav,.nav-item,.nav-link{
+            position: relative;
+            .navbar-vav,.nav-item,.nav-link::before{
+                content: " ";
+                position: absolute;
+                bottom: 0%;
+                left: 0%;
+                background-color: $menu;
+                height: 3px;
+                width: 0%;
+                transform: 2s;
+            }
+            .navbar-vav,.nav-item,.nav-link:hover::before{
+                left: 45%;
+                width: 5%;
+                transition: 1s;
+                @include media-min-lg{
+                    left: 15%;
+                    width: 50%;
+                }
+            }
+        }
+        .navbar-vav,.nav-item,.home{
+            position: relative;
+            .navbar-vav,.nav-item,.home::before{
+                content: " ";
+                position: absolute;
+                bottom: 0%;
+                left: 45%;
+                background-color: rgb(226, 19, 19);
+                height: 3px;
+                width: 5%;
+                @include media-min-lg{
+                    left: 15%;
+                    height: 3px;
+                    width: 50%;
+                }
+            }
+        }
+        .collapse{
+            ul{
+                @include media-min-lg{
+                    padding-left: 42px;
+                }
+                @include media-min-xl{
+                    padding-left: 0px;
+                }
+                li{
+                    @include media-min-lg{
+                    padding-left: 20px;
+                    }
+                }
+            }
+        }
+        .result{
+            height: 300px;
+            .row{
+                .result1{
+                    padding-top: 20px;
+                    @include media-min-lg{
+                    padding-top: 230px;
+                    }
+                }
+            }
+        }
+        .card1{
+            display: none;
+            .card{
+                .btn{
+                    width: 260px;
+                    @include media-min-sm{
+                        width: 400px;
+                    }
+                    @include media-min-lg{
+                        width: 260px;
+                    }
+                }
+            }
+            @include media-min-lg{
+                display: block;
+            }
+            @include media-min-lg{
+            padding-top: 110px;
+            }
+        }
+        @include media-min-sm{
+            height: 80vh;
+        }
+        @include media-min-lg{
+            height: 70vh;
+        }
+        @include media-min-xl{
+            height: 130vh;
+        }
+    }
+    @include media-min-sm{
+        height: 80vh;
+    }
+    @include media-min-lg{
+        height: 70vh;
+    }
+    @include media-min-xl{
+        height: 130vh;
+    }
+}

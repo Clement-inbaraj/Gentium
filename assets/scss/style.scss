@@ -1,0 +1,191 @@
+@import "./abstracts/variables";
+@import "./mixins/breakpoints";
+@import "./abstracts/common";
+@import "./includes/header";
+@import "./includes/footer";
+@import "./abstracts/buttons";
+// =========================================section 2==========================================================
+.container{
+    .main{
+        .name1{
+            background-color: rgb(248, 244, 244);
+            .fas{
+                color: $icon;
+                &:hover{
+                    color: $white;
+                }
+            }
+            .far{
+                color: $icon;
+                &:hover{
+                    color: $white;
+                }
+            }
+            &:hover{
+                background-color: $icon;
+                color:$white;
+                .fas{
+                    color: $white;
+                }
+                .far{
+                    color: $white;
+                }
+            }
+        }
+        .name{
+            .fas{
+                color: $icon;
+                &:hover{
+                    color: $white;
+                }
+            }
+            .far{
+                color: $icon;
+                &:hover{
+                    color: $white;
+                }
+            }
+            &:hover{
+                background-color: $icon;
+                color: $white;
+                .fas{
+                    color: $white;
+                }
+                .far{
+                    color: $white;
+                }
+            }
+        }
+    }
+}
+// ===================================section 3 ========================================================
+.most{
+    .team{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 25px 15px;
+        @include media-min-lg{
+            padding: 60px;
+        }
+        @include media-min-xl{
+            padding: 90px;
+        }
+    }
+    .image{
+        background: url("../../public/images/seo-hero.jpg") no-repeat center;
+        background-size: cover;
+        width: 100%;
+        height: 300px;
+       .last1{
+            .fas{
+                color: $icon;
+                padding: 35px;
+                border-radius: 50%;
+                background-color: #fff;
+            }
+        }
+        @include media-min-md{
+            height: 450px;
+        }
+        @include media-min-lg{
+            height: 570px;
+            width: 112%;
+        }
+        @include media-min-xl{
+            height: 690px;
+        }
+    }
+ }
+// ================================section 4 ==========================================================
+.spcial{
+    .super1{
+        .first{
+        &:hover{
+            overflow: hidden;
+            .two{
+                display: flex;
+            }
+            .log{
+                transform: scale(110%);
+                transition: 0.3s;
+            }
+        }
+        .two{
+            display: none;
+        }
+        }
+    }
+}
+// ====================================section 5 ============================================
+.come{
+    .carousel-indicators{
+        .six{
+            width: 1.5%;
+            height: 1.5vh;
+            border-radius: 50%;
+            &.active{
+                background-color: $one;
+            }
+        }
+        display: none;
+            @include media-min-lg{
+                display: block;
+            }
+    }
+}
+// =============================section 6 =======================================================
+.container{
+    .moveone{
+        .carousel{
+            .carousel-indicators{
+                button{
+                    width: 15px;
+                    height: 15px;
+                    border: 1px solid $red;
+                    border-radius: 10px;
+                    background-color: $white;
+                }
+                .active{
+                    background: $red;
+                }
+            }
+        .carousel-inner{
+            height: 720px;
+            .carousel-item{
+                .box{
+                    .card{
+                    width: 450px;
+                    .other{
+                        .mainimg{
+                            @include media-max-sm{
+                                max-height: 100px;
+                            }
+                            height: 235px;
+                        }
+                        overflow: hidden;
+                        &:hover{
+                            .mainimg{
+                                transform:scale(120%);
+                                transition: 0.3s;
+                            }
+                        }
+                    }
+                    }
+                }
+            }
+            @include media-min-md{
+                height: 550px;
+            }
+            @include media-min-lg{
+                height: 540px;
+            }
+            @include media-min-xl{
+                height: 540px;
+            }
+        }
+        }
+    }
+}
+// ============================ ====================================================================
+

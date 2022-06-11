@@ -1,0 +1,51 @@
+*{
+       margin: 0;
+       padding: 0;
+   }
+.bg-image{
+    .container{
+        .row{
+            .foo1{
+                @include media-min-md{
+                padding-top: 30px;
+                }
+            }
+            .foo2{
+                 padding-top: 30px;
+                @include media-min-md{
+                    padding: 190px 0px 0px 0px;
+                    }
+            }
+        }
+    }
+}
+// =========================================
+.bg-dark{
+    .container{
+        .row{
+            .pic2{
+                .nav{
+                    .nav-item{
+                        .nav-link{
+                            color: white;
+                        &:hover{
+                            color: $menu;
+                            }
+                        }
+                        .nav-link::after{
+                            content: '';
+                            width:0px;
+                            height:2px;
+                            display: block;
+                            transition: 0.5s;
+                        }
+                        .nav-link:hover::after{
+                            width:50px;
+                            background-color: $menu;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
